@@ -8,8 +8,16 @@ function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
 
-let computerMove = `kamień`;
+let randomNumber = Math.floor(Math.random() * 3 + 1);
+console.log('Wylosowana liczba to: ' + randomNumber);
 
-let playerMove = `papier`;
+if(randomNumber == 1){
+  	computerMove = 'kamień';
+} else if(randomNumber == 2) {
+	computerMove = 'nożyce'; 
+} else if(randomNumber == 3 ) {
+	computerMove = 'papier'
+}
 
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to ' + playerMove + ', to wygrywasz!');
+printMessage('Mój ruch to: ' + computerMove);
+
